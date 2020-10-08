@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <title>Anime</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <style>
+            body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .topnav {
+            overflow: hidden;
+            background-color: #FF1493;
+            max-width: 100%;
+            }
+            
+            .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+            
+            .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+            
+            .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+            .content {
+                max-width: 80%;
+                margin: auto;
+                background: white;
+            }
+
+            .image {
+                float: left;
+                max-width: 17.68%;
+                height: 100%;
+                background: #ccc;
+                padding: 20px;
+            }
+
+            .info {
+                float: right;
+                padding: 20px;
+                width: 75%;
+                height: 100%;
+                background-color: lightgrey;
+                display: table;
+            }
+
+             {
+                
+            }
+
+            .image button {
+                border: none;
+                outline: 0;
+                padding: 12px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            .price {
+                color: red;
+                font-size: large;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            #table {
+                border-color: #000;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: large;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <div class="content">
+        <div class="topnav">
+            <a href="HomePage.html">Home</a>
+            <a href="Cart.html">Cart</a>
+            <a href="Checkout.html">Checkout</a>
+            <a href="#about">About</a>
+        </div>
+
+        <section>
+            <div class="image">
+                <img src="images/anime2.jpg" class="img-thumbnail img-responsive" alt="One Piece" width="100%"/>
+                <p class="title">Hunter x Hunter</p>
+                <p class="price">RM 100</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            
+            <div class="info">
+                <h4><b>Synopsis</b></h4>
+                <p style="text-align: justify;">
+                    Hunter x Hunter is set in a world where Hunters exist to perform all manner of dangerous tasks like capturing criminals 
+                    and bravely searching for lost treasures in uncharted territories. Twelve-year-old Gon Freecss is determined to become 
+                    the best Hunter possible in hopes of finding his father, who was a Hunter himself and had long ago abandoned his young 
+                    son. However, Gon soon realizes the path to achieving his goals is far more challenging than he could have ever imagined.
+                    <br>
+                    <br>
+                    Along the way to becoming an official Hunter, Gon befriends the lively doctor-in-training Leorio, vengeful Kurapika, and 
+                    rebellious ex-assassin Killua. To attain their own goals and desires, together the four of them take the Hunter Exam, 
+                    notorious for its low success rate and high probability of death. Throughout their journey, Gon and his friends embark 
+                    on an adventure that puts them through many hardships and struggles. They will meet a plethora of monsters, creatures, 
+                    and characters—all while learning what being a Hunter truly means.
+                </p>
+                <table id="table">
+                    <tr>
+                      <td><b>Date:</b></td>
+                      <td>2011 - 2014</td>
+                    </tr>
+                    <tr>
+                        <td><b>Studios:</b></td>
+                        <td>Madhouse</td>
+                    </tr>  
+                    <tr>
+                        <td><b>Genre:</b></td>
+                        <td>Action, Adventure, Fantasy, Shounen, Super Power</td>
+                    </tr> 
+                    <tr>
+                        <td><b>Episodes:</b></td>
+                        <td>148</td>
+                    </tr>
+                    <tr>
+                        <td><b>Rating:</b></td>
+                        <td>PG-13 - Teens 13 or older</td>
+                    </tr>  
+                </table>
+            </div>
+        </section>
+    </div>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <title>Anime</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <style>
+            body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .topnav {
+            overflow: hidden;
+            background-color: #FF1493;
+            max-width: 100%;
+            }
+            
+            .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+            
+            .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+            
+            .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+            .content {
+                max-width: 80%;
+                margin: auto;
+                background: white;
+            }
+
+            .image {
+                float: left;
+                max-width: 17.55%;
+                height: 100%;
+                background: #ccc;
+                padding: 20px;
+            }
+
+            .info {
+                float: right;
+                padding: 20px;
+                width: 75%;
+                height: 100%;
+                background-color: lightgrey;
+                display: table;
+            }
+
+            .image button {
+                border: none;
+                outline: 0;
+                padding: 12px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            .price {
+                color: red;
+                font-size: large;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            #table {
+                border-color: #000;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: large;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <div class="content">
+        <div class="topnav">
+            <a href="HomePage.html">Home</a>
+            <a href="Cart.html">Cart</a>
+            <a href="Checkout.html">Checkout</a>
+            <a href="#about">About</a>
+        </div>
+
+        <section>
+            <div class="image">
+                <img src="images/anime1.jpg" class="img-thumbnail img-responsive" alt="One Piece" width="100%"/>
+                <p class="title">Fullmetal Alchemist: Brotherhood</p>
+                <p class="price">RM 120</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            
+            <div class="info">
+                <h4><b>Synopsis</b></h4>
+                <p style="text-align: justify;">
+                Alchemy is bound by this Law of Equivalent Exchange—something the young brothers Edward and Alphonse Elric only 
+                realize after attempting human transmutation: the one forbidden act of alchemy. They pay a terrible price for their 
+                transgression—Edward loses his left leg, Alphonse his physical body. It is only by the desperate sacrifice of Edward's 
+                right arm that he is able to affix Alphonse's soul to a suit of armor. Devastated and alone, it is the hope that they
+                would both eventually return to their original bodies that gives Edward the inspiration to obtain metal limbs called 
+                "automail" and become a state alchemist, the Fullmetal Alchemist.<br>
+                <br>
+                Three years of searching later, the brothers seek the Philosopher's Stone, a mythical relic that allows an alchemist 
+                to overcome the Law of Equivalent Exchange. Even with military allies Colonel Roy Mustang, Lieutenant Riza Hawkeye, and 
+                Lieutenant Colonel Maes Hughes on their side, the brothers find themselves caught up in a nationwide conspiracy that 
+                leads them not only to the true nature of the elusive Philosopher's Stone, but their country's murky history as well. 
+                In between finding a serial killer and racing against time, Edward and Alphonse must ask themselves if what they are 
+                doing will make them human again... or take away their humanity.
+                </p>
+                <table id="table">
+                    <tr>
+                      <td><b>Date:</b></td>
+                      <td>2009 - 2010</td>
+                    </tr>
+                    <tr>
+                        <td><b>Studios:</b></td>
+                        <td>Bones</td>
+                    </tr>  
+                    <tr>
+                        <td><b>Genre:</b></td>
+                        <td>Action, Military, Adventure, Comedy, Drama, Magic, Fantasy, Shounen</td>
+                    </tr> 
+                    <tr>
+                        <td><b>Episodes:</b></td>
+                        <td>64</td>
+                    </tr>
+                    <tr>
+                        <td><b>Rating:</b></td>
+                        <td>R - 17+ (violence & profanity)</td>
+                    </tr>  
+                </table>
+            </div>
+        </section>
+    </div>
+
+</html>
