@@ -36,7 +36,8 @@
   	clear: both;
   	display: table;
 	}*/
-
+	
+	
     /* END TOP NAVIGATION CSS */
 	.MiddleContent{
 		max-width: 80%;
@@ -162,6 +163,8 @@
 	}
 	/*End banner css */
 
+
+
 	/*Start Login css*/
 
 	/* Full-width input fields */
@@ -192,10 +195,14 @@
 	/* Extra styles for the cancel button */
 	.cancelbtn {
   		width: auto;
-  		padding: 10px 18px;
+  		padding: 14px 20px;
   		background-color: #f44336;
 	}
-
+	
+	.cancelbtn, .signupbtn {
+  		float: left;
+  		width: 50%;
+}
 	/* Center the image and position the close button */
 	.imgcontainer {
   		text-align: center;
@@ -223,33 +230,29 @@
   		display: none; /* Hidden by default */
   		position:fixed; /* Stay in place */
   		z-index: 1; /* Sit on top */
-  		margin: auto;
-  		left: 20%;
-  		right: 20%;
-  		top: 5%;
-  		bottom:10%;
- 		/* width: 50%; /* Full width */
- 		/* height: 50%; /* Full height */
- 		/* overflow: auto; /* Enable scroll if needed */
-  		/*background-color: rgb(0,0,0); /* Fallback color */
-  		/*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
- 		/* padding-top: 60px;*/
-		justify-content: center;
+  		left: 0;
+  		top: 0;
+  		width: 100%; /* Full width */
+ 		height: 100%; /* Full height */
+  		/*background-color: #474e5d;*/
 	}
 
 	/* Modal Content/Box */
 	.modal-content {
   		background-color: #fefefe;
-  		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  		margin: 5% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+	    max-width: 50%;
   		border: 1px solid #888;
-  		width: 80%; /* Could be more or less, depending on screen size */
+		
+		/* Could be more or less, depending on screen size */
 	}
 
 	/* The Close Button (x) */
 	.close {
-  		position: absolute;
-  		right: 25px;
-  		top: 0;
+  		position: relative;
+  		float: right;
+  		top: 5%;
+		right:1%;
   		color: #000;
   		font-size: 35px;
   		font-weight: bold;
@@ -287,4 +290,17 @@
     		width: 100%;
   		}
 	}
+	
+	.clearfix::after {
+  		content: "";
+  		clear: both;
+  		display: table;
+	}
+	
+	@media screen and (max-width: 300px) {
+  		.cancelbtn, .signupbtn {
+    		width: 100%;
+  		}
+	}
+
 	/*End Login css*/
