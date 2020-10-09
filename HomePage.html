@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <head>
-        <link rel="stylesheet" href="home_page.css">
-        <link rel="stylesheet" href="login_form.css">
+        <link rel="stylesheet" href="css/home_page.css">
+        <!--<link rel="stylesheet" href="login_form.css">-->
         <script src="log_in.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 	
 	
@@ -21,14 +22,18 @@
             <a href="Cart.html">Cart</a>
             <a href="Checkout.html">Checkout</a>
             <a href="#about">About</a>
-            
+            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  				<input type="text" placeholder="Search Anime" name="search2">
+  				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right; margin-right: 10%;">Login</button>
         </div>
 		<br>
 		
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right">Login</button>
+		
 
 		<div id="id01" class="modal">
-  
+  		
   			<form class="modal-content animate" action="/action_page.php" method="post">
     			<div class="imgcontainer">
       				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -58,6 +63,7 @@
 		<br>
 		<br>
 		<br>
+			<div class ="MiddleContent">
 		<!-- Slideshow container -->
 		<div class="slideshow-container">
 
@@ -94,7 +100,7 @@
   			<span class="dot" onclick="currentSlide(3)"></span>
 		</div>
 		
-		</div>
+		
 	
 		<br>
 	
@@ -162,7 +168,8 @@
                 <p>Ranked: #8</p>
             </div>
         </div>
-	
+        </div>
+	</div>
 	<script>
 		//for banner
 		var slideIndex = 0;
