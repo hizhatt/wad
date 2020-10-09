@@ -15,30 +15,49 @@
 
 	
     <div class="content">
-        <div class="topnav">
+		
+		<div class="topnav">
             <a href="HomePage.html">Home</a>
             <a href="Cart.html">Cart</a>
             <a href="Checkout.html">Checkout</a>
             <a href="#about">About</a>
-            <button class="open-button" style="float: right;" onclick="openForm()">Login</button>
+            
         </div>
+		<br>
+		
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right">Login</button>
 
-        <div class="form-popup" id="myForm" style="float: right;">
-            <form action="/action_page.php" class="form-container">
-              <h3>Login</h3>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn new">New User</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
-        </div>
+		<div id="id01" class="modal">
+  
+  			<form class="modal-content animate" action="/action_page.php" method="post">
+    			<div class="imgcontainer">
+      				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      				<img src="Images/Avatar.png" alt="Avatar" class="avatar">
+    			</div>
 
+    			<div class="container">
+      				<label for="uname"><b>Username</b></label>
+      				<input type="text" placeholder="Enter Username" name="uname" required>
+
+      				<label for="psw"><b>Password</b></label>
+      				<input type="password" placeholder="Enter Password" name="psw" required>
+        
+      				<button type="submit">Login</button>
+      				<label>
+        				<input type="checkbox" checked="checked" name="remember"> Remember me
+      				</label>
+    			</div>
+
+    			<div class="container" style="background-color:#f1f1f1">
+      				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      				<span class="psw">Forgot <a href="#">password?</a></span>
+    			</div>
+  			</form>
+		</div>
+	
+		<br>
+		<br>
+		<br>
 		<!-- Slideshow container -->
 		<div class="slideshow-container">
 
@@ -145,6 +164,7 @@
         </div>
 	
 	<script>
+		//for banner
 		var slideIndex = 0;
 		showSlides();
 
@@ -164,6 +184,19 @@
   			dots[slideIndex-1].className += " active";
   			setTimeout(showSlides, 5000); // Change image every 2 seconds
 			}
+		
+			// for login
+			// Get the modal
+			var modal = document.getElementById('id01');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+    			if (event.target == modal) {
+        			modal.style.display = "none";
+    			}
+			}
+
+
 	</script>
     	
 </body>
