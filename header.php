@@ -19,7 +19,8 @@
 	</form>
            	
      <a href="Cart.html"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%"></i></a>
+	
 	<?php include"btnsignup.php" ?>
 	<?php include"btnsignin.php" ?>
-	 
+
 </div>
