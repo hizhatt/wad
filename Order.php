@@ -29,13 +29,13 @@
 		
 		<table class="w3-table-all w3-hoverable">
     		<thead>
-      			<tr class="w3-light-grey">
+      			<tr class="w3-indigo">
         			<th>Orders</th>
         			<th>Date</th>
         			<th>Status</th>
       			</tr>
     		</thead>
-    		<tr>
+    		<tr class="w3-hover-pink">
       			<td>Order ID</td>
       			<td>dd-mm-yy</td>
       			<td>Status</td>
