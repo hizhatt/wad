@@ -41,9 +41,9 @@ hr {
   margin: auto;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 20%;
   opacity: 0.9;
-	justify-content: center;
+
 }
 
 .savebtn:hover {
