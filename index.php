@@ -17,23 +17,10 @@
 <body>
 	<header>
 		<?php include"header.php" ?>
+		 	
+            
 	</header>
 	
-    <div class="content">
-		
-	
-            
-            
-            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-  				<input type="text" placeholder="Search Anime" name="search2">
-  				<button type="submit"><i class="fa fa-search"></i></button>
-			</form>
-           	
-            <a href="Cart.html"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%"></i></a>
-            
-  	        
-  	      
-        </div>
 		<br>
 		
 		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right; margin-right: 10%; background-color: #b366ff">Login</button>
