@@ -23,7 +23,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: #ffb3d9;
   outline: none;
 }
 
@@ -49,6 +49,23 @@ hr {
 .savebtn:hover {
   opacity:1;
 }
+
+.editbtn {
+  background-color: #6666ff;
+  color: white;
+  padding: 16px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+
+}
+
+.editbtn:hover {
+  opacity:1;
+}
+
 
 
 
