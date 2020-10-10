@@ -17,16 +17,11 @@
 <body>
 	<header>
 		<?php include"header.php" ?>
-		 	
-            
 	</header>
 	
 		<br>
-		
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right; margin-right: 10%; background-color: #b366ff">Login</button>
-  	     <button onclick="document.getElementById('id02').style.display='block'" style="width:auto; float:right; margin-right: 1%; background-color: #9999ff">Sign Up</button>
-  	     
-  	     <br>
+
+  	    <br>
 		<!-- The Modal (contains the Login form) -->
 		<div id="id01" class="modal">
   		
