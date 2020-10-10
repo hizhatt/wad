@@ -1,10 +1,70 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Profile</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>Profile</title>
+		<link rel="stylesheet" href="css/top_nav.css">
+        <link rel="stylesheet" href="css/home_page.css">
+        <link rel="stylesheet" href="css/Profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
 
-<body>
-</body>
+	<body>
+	
+	<div class="content">
+	
+	<div class="topnav">
+            <a href="HomePage.html">Home</a>
+            <a href="Recent.html">Recent</a>
+            <a href="Popular.html">Popular</a>
+            <a href="Genre.html">Genre</a>
+            <a href="About.html">About Us</a>
+            <div class="dropdown">
+    			<button class="dropbtn">Account
+      				<i class="fa fa-caret-down"></i>
+    			</button>
+    			<div class="dropdown-content">
+      				<a href="Profile.html">Profile</a>
+      				<a href="Order.html">Order</a>
+    			</div>
+  			</div>
+      <a href="Cart.html"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: -100%"></i></a>
+      </div>
+		<br>  
+	<div class="MiddleContent">
+	
+	<form action="action_page.php">
+  		<div class="container">
+    	<h1>Profile</h1>
+    	
+    	<hr>
+    		<label for="FirstName"><b>First Name</b></label>
+    		<input type="text" placeholder="Enter First Name" name="firstName" id="firstName" required>
+    		
+    		<label for="Last Name"><b>Last Name</b></label>
+    		<input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" required>
+    		
+    		<label for="address"><b>Address</b></label>
+    		<input type="text" placeholder="Enter Address" name="address" id="address" required>
+    		
+    		<label for="email"><b>Email</b></label>
+    		<input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    		<label for="psw"><b>Password</b></label>
+    		<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    		
+    		<label for="phone"><b>Phone Number</b></label>
+    		<input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required>
+
+    	<hr>
+
+    	
+    	<button type="save" class="savebtn">Save</button>
+  		</div>
+
+  		
+	</form>
+	</div>
+	</div>
+	</body>
 </html>
