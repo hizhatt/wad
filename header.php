@@ -20,8 +20,8 @@
            	
      <a href="Cart.php"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%"></i></a>
 	
-	<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; float:right; margin-right: 1%; background-color: #9999ff">Sign Up</button>
-	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right; margin-right: 10%; background-color: #b366ff">Login</button>
+	<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; float:right; margin-right: 2%; background-color: #9999ff">Sign Up</button>
+	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Login</button>
 	
 	<?php include"signup.php" ?>
 	<?php include"signin.php" ?>
