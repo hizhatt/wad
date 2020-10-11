@@ -38,7 +38,7 @@
 	<?php endif ?>
 
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	Welcome <strong><?php echo $_SESSION['username']; ?></strong>
+		<a><i class="fa fa-id-badge" style="font-size:24px; float:right; width: auto;">Welcome <strong><?php echo $_SESSION['username']; ?></strong></i></a>
     	<a href="index.php?logout='1'" style="color: white;">Logout</a> 
 	<?php endif ?>
 
