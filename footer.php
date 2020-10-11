@@ -14,7 +14,7 @@
 	<?php endif ?>
 	
 	<?php  if (!isset($_SESSION['username'])) : ?>
-		<button onclick="location.href='admin.php'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Admin</button>
+		<button onclick="location.href='signinadmin.php'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Admin</button>
 	<?php endif ?>
 
 	<?php  if (isset($_SESSION['username'])) : ?>
