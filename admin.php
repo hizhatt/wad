@@ -5,6 +5,11 @@ function deluser(userid) {
 		window.location.replace("admin.php?action=deleteuser&userid="+userid);
     }
 }
+function delanime(animeid) {
+    if (confirm("Are you sure want to delete this anime!") == true) {
+		window.location.replace("admin.php?action=deleteanime&animeid="+animeid);
+    }
+}
 </script>
 
 <?php
@@ -13,6 +18,18 @@ if(isset($_GET['action'])){
       if(isset($_GET['userid'])){
         $id = $_GET['userid'];
         mysqli_query($db, "DELETE FROM `users` WHERE id='$id'");
+        header('location: admin.php');
+      }
+    }
+}
+?>
+
+<?php
+if(isset($_GET['action'])){
+  if($_GET['action']=='deleteanime'){
+      if(isset($_GET['animeid'])){
+        $id = $_GET['animeid'];
+        mysqli_query($db, "DELETE FROM `products` WHERE id='$id'");
         header('location: admin.php');
       }
     }
@@ -84,7 +101,7 @@ if(isset($_GET['action'])){
               <td>
                 <a href='adminEditProduct.php'>
                     <button type='edit'>Edit</button></a>
-                    <button onclick='del()'>Delete</button>
+                    <button onclick='delanime($row[id])'>Delete</button>
               </td>
             </tr>";
             }   
