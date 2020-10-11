@@ -43,13 +43,16 @@ if(isset($_GET['action'])){
               <th>Price</th>
             </tr>
 			<?php
-			$total=330;
+			$total=0;
 			$sql = "SELECT * FROM orders";
 			$result = mysqli_query($db, $sql);
 			if (mysqli_num_rows($result) > 0) 
 			{
 				while($row = mysqli_fetch_assoc($result)) 
 				{
+				$a = $row["price"];
+				$b = str_replace('RM ', '', $a);
+				$total += intval($b);
 				echo
 				"<tr>
 					<td>Item $row[id]</td>

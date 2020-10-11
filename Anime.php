@@ -1,7 +1,11 @@
 <?php include('server.php') ?>
 
+<script>
+function itemadded(){
+	alert("Item added to your cart!")
+	}
+</script>
 
-?>
 <!DOCTYPE html>
 <html>
     <title>Anime</title>
@@ -45,7 +49,7 @@
 				<form method='post'>
 				<input type='hidden' name='title' id='title' value='$row[title]'>
 				<input type='hidden' name='price' id='price' value='$row[price]'>
-				<button class='btn' type='submit' name='addtocart'>Add to cart</button>
+				<button class='btn' type='submit' name='addtocart' onclick='itemadded()'>Add to cart</button>
 				</form>
 				
 				

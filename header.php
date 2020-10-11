@@ -11,6 +11,9 @@
 		header("location: index.php");
 	}
 ?>
+<script>
+function search(){if (confirm("Nothing found") == true) {}}
+</script>
 <div class="topnav">
 	<a href="index.php" style="font-size:30;"><strong>MyAnimeBuy</strong></a>
 	<a></a>
@@ -30,9 +33,9 @@
 		</div>	
 	</div>
 	<?php endif ?>
-	<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+	<form class="example" action="index.php" style="margin:auto;max-width:300px">
   			<input type="text" placeholder="Search Anime" name="search2">
-  			<button type="submit"><i class="fa fa-search"></i></button>
+  			<button onclick="search()"><i class="fa fa-search"></i></button>
 	</form>
            	
      <a href="Cart.php"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%">Cart</i></a>
