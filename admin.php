@@ -99,7 +99,7 @@ if(isset($_GET['action'])){
             "<tr>
               <td>$row[title]</td>
               <td>
-                <a href='adminEditProduct.php'>
+                <a href='adminEditProduct.php?id={$row["id"]}'>
                     <button type='edit'>Edit</button></a>
                     <button onclick='delanime($row[id])'>Delete</button>
               </td>
