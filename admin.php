@@ -20,7 +20,7 @@
             <table id="user">
             <tr>
               <th class="test">User</th>
-              <th>Action <a href='adminEditUser.php'><button class="user">Add User</button></a></th>
+              <th>Action <a href='adminAddUser.php'><button class="user">Add User</button></a></th>
             </tr>
         <?php
         $sql ="SELECT * FROM users";
@@ -49,7 +49,7 @@
         <table id="anime">
             <tr>
               <th class="test">Anime</th>
-              <th>Action <a href='adminEditProduct.php'><button class="user">Add Anime</button></a></th>
+              <th>Action <a href='adminAddProduct.php'><button class="user">Add Anime</button></a></th>
             </tr>
         <?php
         $sql ="SELECT * FROM products";

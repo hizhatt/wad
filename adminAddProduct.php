@@ -23,7 +23,7 @@
 	
 	<form action="/AccountSetting.html">
   		<div class="container">
-    	<h1>Admin Control: Edit Anime</h1>
+    	<h1>Admin Control: Add Anime</h1>
     	
     	
     	<hr>

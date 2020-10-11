@@ -23,7 +23,7 @@
 	
 	<form action="/AccountSetting.html">
   		<div class="container">
-    	<h1>Admin Control: Edit User</h1>
+    	<h1>Admin Control: Add User</h1>
     	
     	
     	<hr>
