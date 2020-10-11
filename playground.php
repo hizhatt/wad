@@ -42,5 +42,5 @@ if (!$conn) {
 //       echo "Error creating table: " . $conn->error;
 //     }
 
-$conn->close();
+// $conn->close();
 ?>

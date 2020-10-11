@@ -1,3 +1,12 @@
+<?php 
+  session_start(); 
+
+  if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['username']);
+	header("location: index.php");
+}
+?>
 <div class="topnav">
 	<a href="index.php">Home</a>
 	<a href="Recent.php">Recent</a>
@@ -19,11 +28,16 @@
 	</form>
            	
      <a href="Cart.php"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%"></i></a>
+
 	
-	<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; float:right; margin-right: 2%; background-color: #9999ff">Sign Up</button>
-	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Login</button>
-	
-	<?php include"signup.php" ?>
-	<?php include"signin.php" ?>
+	<?php  if (!isset($_SESSION['username'])) : ?>
+		<button onclick="location.href='signup.php'" style="width:auto; float:right; margin-right: 2%; background-color: #9999ff">Sign Up</button>
+		<button onclick="location.href='signin.php'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Login</button>
+	<?php endif ?>
+
+	<?php  if (isset($_SESSION['username'])) : ?>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p> <a style="width:auto; float:right; margin-right: 2%; background-color: #9999ff" href="index.php?logout='1'" style="color: white;">Logout</a> </p>
+	<?php endif ?>
 
 </div>

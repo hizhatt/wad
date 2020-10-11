@@ -1,28 +1,34 @@
-<!-- The Modal (contains the Login form) -->
-		<div id="id01" class="modal">
-  		
-  			<form class="modal-content animate" action="/action_page.php" method="post">
-   			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    			<div class="imgcontainer">
-      			
-      				<img src="Images/Avatar.png" alt="Avatar" class="avatar">
-    			</div>
-
-    			<div class="container">
-     				
-      				<label for="uname"><b>Username</b></label>
-      				<input type="text" placeholder="Enter Username" name="uname" required>
-
-      				<label for="psw"><b>Password</b></label>
-      				<input type="password" placeholder="Enter Password" name="psw" required>
-        
-      				<button type="submit">Login</button>
-      				<label >
-        				<input type="checkbox" checked="checked" name="remember"> Remember me
-      				</label>
-      				<span class="psw">Forgot <a href="#">password?</a></span>
-    			</div>
-
-    			<br>
-  			</form>
-		</div>
+<?php include('server.php') ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="header">
+  	<p>Login</p>
+  </div>
+	 
+  <form method="post" action="signin.php">
+  	<?php include('errors.php'); ?>
+  	<div class="input-group">
+  		<label>Username</label>
+  		<input type="text" name="username" >
+  	</div>
+  	<div class="input-group">
+  		<label>Password</label>
+  		<input type="password" name="password">
+  	</div>
+  	<div class="input-group">
+	  	<button class="btn-cancel" onclick="location.href='javascript:history.back()'" type="button">
+         Cancel</button>
+		<button type="submit" class="btn" name="login_user">Login</button>
+		  
+  	</div>
+  	<p>
+  		Not yet a member? <a href="signup.php">Sign up</a>
+  	</p>
+  </form>
+</body>
+</html>

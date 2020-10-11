@@ -6,13 +6,13 @@ $username = "";
 $email    = "";
 $errors = array(); 
 
-$servername = "localhost:3306";
-$username = "root";
-$password = "";
-$dbname = "myDB";
+// $servername = "localhost:3306";
+// $username = "root";
+// $password = "";
+// $dbname = "myDB";
 
 // Create connection
-$db = mysqli_connect($servername, $username, $password, $dbname);
+$db = mysqli_connect("localhost:3306", "root", "", "myDB");
 
 // Check connection
 if (!$db) {
