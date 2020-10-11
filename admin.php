@@ -1,4 +1,23 @@
 <?php include('server.php') ?>
+<script>
+function deluser(userid) {
+    if (confirm("Are you sure want to delete this customer!") == true) {
+		window.location.replace("admin.php?action=deleteuser&userid="+userid);
+    }
+}
+</script>
+
+<?php
+if(isset($_GET['action'])){
+  if($_GET['action']=='deleteuser'){
+      if(isset($_GET['userid'])){
+        $id = $_GET['userid'];
+        mysqli_query($db, "DELETE FROM `users` WHERE id='$id'");
+        header('location: admin.php');
+      }
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
     <title>Anime</title>
@@ -36,7 +55,7 @@
               <td>
                 <a href='adminEditUser.php?id={$row["id"]}'>
                     <button type='edit'>Edit</button></a>
-                    <button onclick='del()'>Delete</button>
+                    <button onclick='deluser($row[id])'>Delete</button>
               </td>
             </tr>";
             }   

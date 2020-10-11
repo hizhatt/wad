@@ -27,6 +27,7 @@
     	<h1>Admin Control: Edit User</h1>
 		
 		<?php
+	if (isset($_GET['id'])) {
 		$id = trim(mysqli_real_escape_string($db, $_GET['id']));
 		$id = intval($id);
 		$sql = "SELECT * FROM users where id = '".$id."' ";
@@ -38,49 +39,39 @@
 			echo
     		"<hr>
     		<label for='userID'>User ID</label><br>
-  			<input type='text' id='id' name='id' placeholder='$row[id]' disabled><br>
+  			<input type='text' id='id' name='userid' value='$row[id]' readonly><br>
   			
     		<label for='username'>Username</label><br>
-  			<input type='text' id='username' name='username' placeholder='$row[username]'><br>
+  			<input type='text' id='username' name='username' value='$row[username]'><br>
   			
     		<label for='email'>Email</label><br>
-  			<input type='text' id='email' name='email' placeholder='$row[email]'><br>
+  			<input type='text' id='email' name='email' value='$row[email]'><br>
 
     		<label for='address'>Address</label><br>
-  			<input type='text' id='address' name='address' placeholder='$row[address]'><br>
+  			<input type='text' id='address' name='address' value='$row[address]'><br>
   			
     		<label for='phoneNumber'>Phone Number</label><br>
-  			<input type='text' id='phoneNumber' name='phoneNumber' placeholder='$row[phoneNumber]'><br>
+  			<input type='text' id='phoneNumber' name='phoneNumber' value='$row[phoneNumber]'><br>
     
 			<hr>";
 			}
 		}
+	}
 		?>
-  		
+  		<button class="btn" type="submit" name="edit_user" >Update</button>
 	</form>
 	
-	<button class="btn" type="submit" name="edit_user" >Edit</button>
-
 	<?php
-
-	// initialize variables
-	$username = "";
-	$email = "";
-	$address = "";
-	$phoneNumber = "";
-
-	echo gettype($id);
-	echo $id;
 
 	if (isset($_POST['edit_user'])) 
     {
-		$id = mysqli_real_escape_string($_POST['id']);
-        $username = mysqli_real_escape_string($_POST['username']);
-        $email = mysqli_real_escape_string($_POST['email']);
-        $address = mysqli_real_escape_string($_POST['address']);
-        $phoneNumber = mysqli_real_escape_string($_POST['phoneNumber']);
+		$id = $_POST['userid'];
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $phoneNumber = $_POST['phoneNumber'];
 
-		mysqli_query($db,"UPDATE users SET username = '".$username."', email = '".$email."', address = '".$address."', phoneNumber = '".$phoneNumber."' WHERE id='".$id."'");
+		mysqli_query($db, "UPDATE users SET username='$username', email='$email', address='$address', phoneNumber='$phoneNumber' WHERE id='$id'");
     	header('location: admin.php');
     }
 	?>
