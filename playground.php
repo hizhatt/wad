@@ -69,5 +69,20 @@ if (!$conn) {
 
     
 
+
+      // $sql = "CREATE TABLE admin (
+      // id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      // username VARCHAR(50),
+      // password VARCHAR(50)
+      // )";
+      
+      // if ($conn->query($sql) === TRUE) {
+      //   echo "Table admin created successfully";
+      // } else {
+      //   echo "Error creating table: " . $conn->error;
+      // }
+
+    
+
 // $conn->close();
 ?>

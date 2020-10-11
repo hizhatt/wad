@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
     <title>Anime</title>
@@ -12,32 +13,36 @@
     </head>
 
     <header>
-		<?php include"header.php" ?>
+		<?php include"headeradmin.php" ?>
     </header>
     
     <body>
-        <table id="user">
+            <table id="user">
             <tr>
               <th class="test">User</th>
               <th>Action <button class="user">Add User</button></th>
             </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
+        <?php
+        $sql ="SELECT * FROM users";
+        $result = mysqli_query($db, $sql);
+
+        if (mysqli_num_rows($result) > 0) 
+        {
+            while($row = mysqli_fetch_assoc($result)) 
+            {
+            echo
+            "<tr>
+              <td>$row[username]</td>
               <td>
-                <a href="Admin_Edit_Account.html">
-                    <button type="edit">Edit</button></a>
-                    <button onclick="del()">Delete</button>
+                <a href='Admin_Edit_Account.html'>
+                    <button type='edit'>Edit</button></a>
+                    <button onclick='del()'>Delete</button>
               </td>
-            </tr>
-            <tr>
-                <td>Berglunds snabbköp</td>
-                <td>
-                    <a href="Admin_Edit_Account.html">
-                        <button type="edit">Edit</button></a>
-                    <button onclick="del()">Delete</button>
-                </td>
-            </tr>
-        </table>
+            </tr>";
+            }   
+        }
+        ?>
+            </table>
 
         <br>
 
@@ -46,22 +51,26 @@
               <th class="test">Anime</th>
               <th>Action <button class="user">Add Anime</button></th>
             </tr>
-            <tr>
-                <td>huh</td>
-                <td>
-                    <a href="Admin_Edit_Account.html">
-                        <button type="edit">Edit</button></a>
-                    <button onclick="del()">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Berglunds snabbköp</td>
-                <td>
-                    <a href="Admin_Edit_Account.html">
-                        <button type="edit">Edit</button></a>
-                    <button onclick="del()">Delete</button>
-                </td>
-            </tr>
+        <?php
+        $sql ="SELECT * FROM products";
+        $result = mysqli_query($db, $sql);
+
+        if (mysqli_num_rows($result) > 0) 
+        {
+            while($row = mysqli_fetch_assoc($result)) 
+            {
+            echo
+            "<tr>
+              <td>$row[title]</td>
+              <td>
+                <a href='Admin_Edit_Account.html'>
+                    <button type='edit'>Edit</button></a>
+                    <button onclick='del()'>Delete</button>
+              </td>
+            </tr>";
+            }   
+        }
+        ?>
         </table>
     </body>
 </html>

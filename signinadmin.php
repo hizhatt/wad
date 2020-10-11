@@ -10,11 +10,11 @@
   	<p>Admin login</p>
   </div>
 	 
-  <form method="post" action="signin.php">
+  <form method="post" action="signinadmin.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   		<label>Username</label>
-  		<input type="text" name="username" value="<?php echo $username; ?>">
+  		<input type="text" name="username">
   	</div>
   	<div class="input-group">
   		<label>Password</label>
@@ -23,8 +23,7 @@
   	<div class="input-group">
 	  	<button class="btn-cancel" onclick="location.href='javascript:history.back()'" type="button">
          Cancel</button>
-		<button type="submit" class="btn" name="login_user">Login</button>
-		<a href="admin.php">To Admin Page</a>  
+		<button type="submit" class="btn" name="login_admin">Login</button>
   	</div>
   </form>
 </body>
