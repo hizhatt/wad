@@ -29,7 +29,7 @@
   			<button type="submit"><i class="fa fa-search"></i></button>
 	</form>
            	
-     <a href="Cart.php"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%"></i></a>
+     <a href="Cart.php"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%">Cart</i></a>
 
 	
 	<?php  if (!isset($_SESSION['username'])) : ?>
