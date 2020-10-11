@@ -63,7 +63,7 @@
 	
         <div class="row">
             <div class="column">
-              <a href="Anime1.html">
+              <a href="Anime1.php">
                   <img src="Images/Anime1.jpg" alt="anime1" style="width: 370px; height:500px ">
               </a>
               <p class="title">Fullmetal Alchemist: Brotherhood</p>
