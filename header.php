@@ -13,6 +13,7 @@
 	<a href="Popular.php">Popular</a>
 	<a href="Genre.php">Genre</a>
 	<a href="About.php">About Us</a>
+	<?php  if (isset($_SESSION['username'])) : ?>
 	<div class="dropdown">
 		<button class="dropbtn">Account
 			<i class="fa fa-caret-down"></i>
@@ -22,6 +23,7 @@
 			<a href="Order.php">Order</a>
 		</div>	
 	</div>
+	<?php endif ?>
 	<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
   			<input type="text" placeholder="Search Anime" name="search2">
   			<button type="submit"><i class="fa fa-search"></i></button>
@@ -36,8 +38,8 @@
 	<?php endif ?>
 
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a style="width:auto; float:right; margin-right: 2%; background-color: #9999ff" href="index.php?logout='1'" style="color: white;">Logout</a> </p>
+    	Welcome <strong><?php echo $_SESSION['username']; ?></strong>
+    	<a href="index.php?logout='1'" style="color: white;">Logout</a> 
 	<?php endif ?>
 
 </div>
