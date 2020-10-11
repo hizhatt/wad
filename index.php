@@ -73,7 +73,7 @@
 			{
 			echo
             "<div class='column'>
-              	<a href='Anime$row[id].php'>
+              	<a href='Anime.php?id={$row["id"]}'>
                   <img src='Images/Anime$row[id].jpg' alt='anime1' style='width: 370px; height:500px '>
               	</a>
               	<p class='title'>$row[title]</p>
