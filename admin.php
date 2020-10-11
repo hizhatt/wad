@@ -51,7 +51,7 @@ if(isset($_GET['action'])){
     <header>
 		<?php include"headeradmin.php" ?>
     </header>
-    
+    <br><br>
     <body>
             <table id="user">
             <tr>
