@@ -305,3 +305,8 @@
 
 
 	/*End Login css*/
+
+	p.italic {
+  		font-style: italic;
+	}
+
