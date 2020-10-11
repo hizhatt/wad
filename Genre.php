@@ -47,7 +47,7 @@
 			
 			<div class="row">
 			
-				<<div class="column">
+				<div class="column">
 					<img src="Images/Anime5.jpg" alt="anime5" style="width: 50%; height:50% ">
               		<p class="title">Death Note</p>
            			<p class="italic">2006 | 37 Episodes</p>
@@ -137,7 +137,7 @@
 		</div>
 		<br><br>
 		<p id="romance">Romance</p>
-		
+		<br>
 		<div class="row">
 			<div class="column">
 				<img src="Images/Anime6.jpg" alt="anime6" style="width: 50%; height:50% ">
