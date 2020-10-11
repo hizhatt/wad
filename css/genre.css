@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Style the links inside the pill navigation menu */
+#rcorners1 {
+  	border-radius: 25px;
+  	background: #7070db;
+  	padding: 20px; 
+  	width: 10%;
+  	height: 10%;
+	color: white;
+	text-align: center;
+}
+
+#rcorners2 {
+  	border-radius: 25px;
+  	background: #ff3377;
+  	padding: 20px; 
+  	width: 10%;
+  	height: 10%; 
+	color: white;
+	text-align: center;
+}
+
+#rcorners3 {
+  	border-radius: 25px;
+  	background: #8080ff;
+  	padding: 20px; 
+  	width: 10%;
+  	height: 10%;  
+	color: white;
+	text-align: center;
+}
+
+#rcorners4 {
+  	border-radius: 25px;
+  	background: #ff80aa;
+  	padding: 20px; 
+  	width: 10%;
+  	height: 10%;  
+	color: white;
+	text-align: center;
+}
