@@ -70,7 +70,7 @@
   		
 	</form>
 	
-	<button onclick="window.location.href='AccountSetting.html';">Edit</button>
+	<button onclick="window.location.href='AccountSetting.php';">Edit</button>
 	
 	</div>
 	</div>
