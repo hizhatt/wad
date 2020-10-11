@@ -71,7 +71,8 @@
         $address = $_POST['address'];
         $phoneNumber = $_POST['phoneNumber'];
 
-		mysqli_query($db, "UPDATE users SET username='$username', email='$email', address='$address', phoneNumber='$phoneNumber' WHERE id='$id'");
+		mysqli_query($db, "UPDATE users SET username='$username', email = '$email', address='$address', phoneNumber='$phoneNumber' WHERE id='$id'");
+
     	header('location: admin.php');
     }
 	?>
