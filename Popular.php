@@ -71,7 +71,7 @@
 			<div class="column">
 				<a href="Anime.php?id=8"><img src="Images/recent8.jpg" alt="recent8" style="width: 50%; height:50% "><a>
               	<p class="title">Japan Sinks 2020</p>
-           		<p class="italic">2020 | Movie</p>
+           		<p class="italic">2020 | 10 Episodes</p>
 			</div>
 		</div>
 		
