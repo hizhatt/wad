@@ -36,6 +36,9 @@
   			
     		<label for="email">Email</label><br>
   			<input type="text" id="email" name="email" placeholder="Email"><br>
+			
+			<label for="password">Password</label><br>
+  			<input type="text" id="password" name="password" placeholder="Password"><br>
 
     		<label for="address">Address</label><br>
   			<input type="text" id="address" name="address" placeholder="Address"><br>
@@ -54,6 +57,7 @@
 	// initialize variables
 	$username = "";
 	$email = "";
+	$password = "";
 	$address = "";
 	$phoneNumber = "";
 
@@ -61,10 +65,11 @@
 		$id =$_POST['id'];
 		$username = $_POST['username'];
 		$email = $_POST['email'];
+		$password = $_POST['password'];
 		$address = $_POST['address'];
 		$phoneNumber = $_POST['phoneNumber'];
 
-		mysqli_query($db, "INSERT INTO users (id, username, email, address, phoneNumber) VALUES ('$id', '$username', '$email', '$address', '$phoneNumber')");
+		mysqli_query($db, "INSERT INTO users (id, username, password, email, address, phoneNumber) VALUES ('$id', '$username', '$password','$email', '$address', '$phoneNumber')");
 		header('location: admin.php');
 	}
 	?>
