@@ -74,7 +74,7 @@
 			echo
             "<div class='column'>
               	<a href='Anime.php?id={$row["id"]}'>
-                  <img src='Images/Anime$row[id].jpg' alt='anime1' style='width: 370px; height:500px '>
+                  <img src='Images/Anime$row[id].jpg' alt='anime1' style='width: 90%; height:100% '>
               	</a>
               	<p class='title'>$row[title]</p>
               	<p>Ranked: #$row[id]</p>
