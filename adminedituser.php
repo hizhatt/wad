@@ -28,6 +28,7 @@
 		
 		<?php
 		$id = trim(mysqli_real_escape_string($db, $_GET['id']));
+		$id = intval($id);
 		$sql = "SELECT * FROM users where id = '".$id."' ";
 		$result = mysqli_query($db, $sql);
 		if (mysqli_num_rows($result)) 
@@ -68,16 +69,18 @@
 	$address = "";
 	$phoneNumber = "";
 
+	echo gettype($id);
 	echo $id;
 
 	if (isset($_POST['edit_user'])) 
 	{
+		$id = $_POST['id'];
 		$username = $_POST['username'];
 		$email = $_POST['email'];
 		$address = $_POST['address'];
 		$phoneNumber = $_POST['phoneNumber'];
 
-	mysqli_query($db, "UPDATE users SET username='".$username."', email='".$email."', address='".$address."', phoneNumber='".$phoneNumber."' WHERE id = '".$id."' ");
+	mysqli_query($db, "UPDATE users SET username='$username', email='$email', address='$address', phoneNumber='$phoneNumber' WHERE id=$id ");
 	header('location: admin.php');
 	}
 	?>
