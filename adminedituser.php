@@ -12,7 +12,7 @@
 	<body>
 	
 	<header>
-		<?php include"header.php" ?>
+		<?php include"headeradmin.php" ?>
 	</header>
 	
 	<div class="content">
@@ -23,7 +23,7 @@
 	
 	<form action="/AccountSetting.html">
   		<div class="container">
-    	<h1>Edit User Details</h1>
+    	<h1>Admin Control: Edit User</h1>
     	
     	
     	<hr>
@@ -35,10 +35,6 @@
   			
     		<label for="email">Email</label><br>
   			<input type="text" id="email" name="email" value="Email"><br>
-    		
-    		<label for="psw">Password</label><br>
-  			<input type="password" id="psw" name="psw" value="Password"><br>
-    		
 
     		<label for="address">Address</label><br>
   			<input type="text" id="address" name="address" value="Address"><br>
@@ -50,7 +46,7 @@
   		
 	</form>
 	
-	<button onclick="window.location.href='AccountSetting.html';">Save</button>
+	<button onclick="window.location.href='admin.php';">Save</button>
 	
 	</div>
 	</div>

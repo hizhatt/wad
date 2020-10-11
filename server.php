@@ -5,7 +5,7 @@
     } 
 
 // initializing variables
-$username = "adam";
+$username = "";
 $email    = "";
 $errors = array(); 
 
