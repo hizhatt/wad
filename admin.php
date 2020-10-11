@@ -34,7 +34,7 @@
             "<tr>
               <td>$row[username]</td>
               <td>
-                <a href='adminEditUser.php'>
+                <a href='adminEditUser.php?id={$row["id"]}'>
                     <button type='edit'>Edit</button></a>
                     <button onclick='del()'>Delete</button>
               </td>

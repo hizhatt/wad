@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!doctype html>
 <html>
 	<head>
@@ -21,32 +22,65 @@
 		<br>  
 	<div class="MiddleContent">
 	
-	<form action="/AccountSetting.html">
+	<form method="post" action="adminedituser.php">
   		<div class="container">
     	<h1>Admin Control: Edit User</h1>
-    	
-    	
-    	<hr>
-    		<label for="userID">User ID</label><br>
-  			<input type="text" id="userID" name="userID" value="User ID"><br>
+		
+		<?php
+		$id = trim(mysqli_real_escape_string($db, $_GET['id']));
+		$sql = "SELECT * FROM users where id = '".$id."' ";
+		$result = mysqli_query($db, $sql);
+		if (mysqli_num_rows($result)) 
+		{
+			while ($row = mysqli_fetch_assoc($result)) 
+			{
+			echo
+    		"<hr>
+    		<label for='userID'>User ID</label><br>
+  			<input type='text' id='id' name='id' placeholder='$row[id]' disabled><br>
   			
-    		<label for="uname">Username</label><br>
-  			<input type="text" id="uname" name="uname" value="Username"><br>
+    		<label for='username'>Username</label><br>
+  			<input type='text' id='username' name='username' placeholder='$row[username]'><br>
   			
-    		<label for="email">Email</label><br>
-  			<input type="text" id="email" name="email" value="Email"><br>
+    		<label for='email'>Email</label><br>
+  			<input type='text' id='email' name='email' placeholder='$row[email]'><br>
 
-    		<label for="address">Address</label><br>
-  			<input type="text" id="address" name="address" value="Address"><br>
+    		<label for='address'>Address</label><br>
+  			<input type='text' id='address' name='address' placeholder='$row[address]'><br>
   			
-    		<label for="phone">Phone Number</label><br>
-  			<input type="text" id="phone" name="phone" value="Phone Number"><br>
+    		<label for='phoneNumber'>Phone Number</label><br>
+  			<input type='text' id='phoneNumber' name='phoneNumber' placeholder='$row[phoneNumber]'><br>
     
-    	<hr>
+			<hr>";
+			}
+		}
+		?>
   		
 	</form>
 	
-	<button onclick="window.location.href='admin.php';">Save</button>
+	<button class="btn" type="submit" name="edit_user" >Edit</button>
+
+	<?php
+
+	// initialize variables
+	$username = "";
+	$email = "";
+	$address = "";
+	$phoneNumber = "";
+
+	echo $id;
+
+	if (isset($_POST['edit_user'])) 
+	{
+		$username = $_POST['username'];
+		$email = $_POST['email'];
+		$address = $_POST['address'];
+		$phoneNumber = $_POST['phoneNumber'];
+
+	mysqli_query($db, "UPDATE users SET username='".$username."', email='".$email."', address='".$address."', phoneNumber='".$phoneNumber."' WHERE id = '".$id."' ");
+	header('location: admin.php');
+	}
+	?>
 	
 	</div>
 	</div>
