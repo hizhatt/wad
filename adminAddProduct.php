@@ -29,7 +29,7 @@
     	
     	<hr>
 			<label for="productID">Product ID</label><br>
-  			<input type="text" id="productID" name="productID" placeholder="Product ID"><br>
+  			<input type="text" id="id" name="id" placeholder="Product ID"><br>
 			
 			<label for="title">Product Title</label><br>
   			<input type="text" id="title" name="title" placeholder="Product Title"><br>
@@ -77,12 +77,11 @@
   		
 	</form>
 	
-	<button class="btn" type="submit" name="save" >Save</button>
+	<button class="btn" type="submit" name="save_product" >Save</button>
 	
 	<?php 
 
 	// initialize variables
-	$productID = "";
 	$title = "";
 	$synopsis = "";
 	$date = "";
@@ -98,25 +97,25 @@
 	$price = "";
 	$availability = "";
 
-	if (isset($_POST['save'])) {
-		$productID =$_POST['id'];
-		$title =$_POST['title'];
-		$synopsis =$_POST['synopsis'];
-		$date =$_POST['date'];
-		$studios =$_POST['studios'];
-		$genre =$_POST['genre'];
-		$episodes =$_POST['episodes'];
-		$duration =$_POST['duration'];
-		$firstDate =$_POST['firstDate'];
-		$finalDate =$_POST['finalDate'];
-		$status =$_POST['status'];
-		$seasons =$_POST['seasons'];
-		$rating =$_POST['rating'];
-		$price =$_POST['price'];
-		$availability =$_POST['availability'];
+	if (isset($_POST['save_product'])) {
+		$id = $_POST['id'];
+		$title = $_POST['title'];
+		$synopsis = $_POST['synopsis'];
+		$date = $_POST['date'];
+		$studios = $_POST['studios'];
+		$genre = $_POST['genre'];
+		$episodes = $_POST['episodes'];
+		$duration = $_POST['duration'];
+		$firstDate = $_POST['firstDate'];
+		$finalDate = $_POST['finalDate'];
+		$status = $_POST['status'];
+		$seasons = $_POST['seasons'];
+		$rating = $_POST['rating'];
+		$price = $_POST['price'];
+		$availability = $_POST['availability'];
 
 		mysqli_query($db, "INSERT INTO products (
-				productID,
+				id,
 				title,
 				synopsis,
 				date,
@@ -132,7 +131,7 @@
 				price,
 				availability) 
 			VALUES (
-				'$productID',
+				'$id',
 				'$title',
 				'$synopsis',
 				'$date',
@@ -146,7 +145,7 @@
 				'$seasons',
 				'$rating',
 				'$price',
-				'$availability)");
+				'$availability')");
 		header('location: admin.php');
 	}
 	?>
