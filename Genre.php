@@ -17,13 +17,13 @@
 	<br><br>
 	<div class="MiddleContent">
 		
-		<p id="rcorners1">Action</p>
+		<p id="action">Action</p>
 
-		<p id="rcorners2">Adventure</p>
+		<p id="adventure">Adventure</p>
 
-		<p id="rcorners3">Fantasy</p>
+		<p id="fantasy">Fantasy</p>
 		
-		<p id="rcorners4">Romance</p>
+		<p id="romance">Romance</p>
 	</div>
 	
 </body>
