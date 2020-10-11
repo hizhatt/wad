@@ -20,7 +20,7 @@
             <table id="user">
             <tr>
               <th class="test">User</th>
-              <th>Action <button class="user">Add User</button></th>
+              <th>Action <a href='adminEditUser.php'><button class="user">Add User</button></a></th>
             </tr>
         <?php
         $sql ="SELECT * FROM users";
@@ -34,7 +34,7 @@
             "<tr>
               <td>$row[username]</td>
               <td>
-                <a href='Admin_Edit_Account.html'>
+                <a href='adminEditUser.php'>
                     <button type='edit'>Edit</button></a>
                     <button onclick='del()'>Delete</button>
               </td>
@@ -49,7 +49,7 @@
         <table id="anime">
             <tr>
               <th class="test">Anime</th>
-              <th>Action <button class="user">Add Anime</button></th>
+              <th>Action <a href='adminEditProduct.php'><button class="user">Add Anime</button></a></th>
             </tr>
         <?php
         $sql ="SELECT * FROM products";
@@ -63,7 +63,7 @@
             "<tr>
               <td>$row[title]</td>
               <td>
-                <a href='Admin_Edit_Account.html'>
+                <a href='adminEditProduct.php'>
                     <button type='edit'>Edit</button></a>
                     <button onclick='del()'>Delete</button>
               </td>
