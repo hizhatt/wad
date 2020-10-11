@@ -73,16 +73,16 @@
 	echo $id;
 
 	if (isset($_POST['edit_user'])) 
-	{
-		$id = $_POST['id'];
-		$username = $_POST['username'];
-		$email = $_POST['email'];
-		$address = $_POST['address'];
-		$phoneNumber = $_POST['phoneNumber'];
+    {
+		$id = mysqli_real_escape_string($_POST['id']);
+        $username = mysqli_real_escape_string($_POST['username']);
+        $email = mysqli_real_escape_string($_POST['email']);
+        $address = mysqli_real_escape_string($_POST['address']);
+        $phoneNumber = mysqli_real_escape_string($_POST['phoneNumber']);
 
-	mysqli_query($db, "UPDATE users SET username='$username', email='$email', address='$address', phoneNumber='$phoneNumber' WHERE id=$id ");
-	header('location: admin.php');
-	}
+		mysqli_query($db,"UPDATE users SET username = '".$username."', email = '".$email."', address = '".$address."', phoneNumber = '".$phoneNumber."' WHERE id='".$id."'");
+    	header('location: admin.php');
+    }
 	?>
 	
 	</div>
