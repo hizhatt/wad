@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
     <title>Anime</title>
@@ -60,72 +61,29 @@
 		
 	
 		<br>
-	
-        <div class="row">
-            <div class="column">
-              <a href="Anime1.php">
-                  <img src="Images/Anime1.jpg" alt="anime1" style="width: 370px; height:500px ">
-              </a>
-              <p class="title">Fullmetal Alchemist: Brotherhood</p>
-              <p>Ranked: #1</p>
-            </div>
-            <div class="column">
-                <a href="Anime2.html">
-                    <img src="Images/Anime2.jpg" alt="anime2" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Hunter x Hunter</p>
-                <p>Ranked: #2</p>
-            </div>
-            <div class="column">
-                <a href="Anime3.html">
-                    <img src="Images/Anime3.jpg" alt="anime3" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Steins;Gate</p>
-                <p>Ranked: #3</p>
-            </div>
-            <div class="column">
-                <a href="Anime4.html">
-                    <img src="Images/Anime4.jpg" alt="anime4" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Gintama°</p>
-                <p>Ranked: #4</p>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="column">
-                <a href="Anime5.html">
-                    <img src="Images/Anime5.jpg" alt="anime5" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Death Note</p>
-                <p>Ranked: #5</p>
-            </div>
-			
-            <div class="column">
-                <a href="Anime6.html">
-                    <img src="Images/Anime6.jpg" alt="anime6" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Fruit Basket</p>
-                <p>Ranked: #6</p>
-            </div>
-			
-            <div class="column">
-                <a href="Anime7.html">
-                    <img src="Images/Anime7.jpg" alt="anime7" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Re:Zero</p>
-                <p>Ranked: #7</p>
-            </div>
-			
-            <div class="column">
-                <a href="Anime8.html">
-                    <img src="Images/Anime8.jpg" alt="anime8" style="width: 370px; height:500px">
-                </a>
-                <p class="title">Fairy Tail</p>
-                <p>Ranked: #8</p>
-            </div>
-        </div>
-        </div>
+		<div class='row'>
+		<?php
+		$sql = "SELECT id, title FROM products";
+		$result = mysqli_query($db, $sql);
+
+		if (mysqli_num_rows($result) > 0) 
+		{
+			while($row = mysqli_fetch_assoc($result)) 
+			{
+			echo
+            "<div class='column'>
+              	<a href='Anime$row[id].php'>
+                  <img src='Images/Anime$row[id].jpg' alt='anime1' style='width: 370px; height:500px '>
+              	</a>
+              	<p class='title'>$row[title]</p>
+              	<p>Ranked: #$row[id]</p>
+            </div>";
+			}
+		}
+		?>
+		</div>
+
 	</div>
 	<script>
 		//for banner
@@ -165,6 +123,9 @@
     			}
 			};
 	</script>
-
+	
+	<footer>
+	<?php include"footer.php"?>
+	</footer>
 </body>
 </html>

@@ -28,23 +28,23 @@
     	
     	<hr>
     		<label for="userID">User ID</label><br>
-  			<input type="text" id="userID" name="userID" value="User ID"><br>
+  			<input disabled type="text" id="userID" name="userID" value="<?php echo $_SESSION['id']; ?>"><br>
   			
     		<label for="uname">Username</label><br>
-  			<input type="text" id="uname" name="uname" value="Username"><br>
+  			<input disabled type="text" id="uname" name="uname" value="<?php echo $_SESSION['username']; ?>"><br>
   			
     		<label for="email">Email</label><br>
-  			<input type="text" id="email" name="email" value="Email"><br>
+  			<input disabled type="text" id="email" name="email" value="Email"><br>
     		
     		<label for="psw">Password</label><br>
-  			<input type="password" id="psw" name="psw" value="Password"><br>
+  			<input disabled type="password" id="psw" name="psw" value="Password"><br>
     		
 
     		<label for="address">Address</label><br>
-  			<input type="text" id="address" name="address" value="Address"><br>
+  			<input disabled type="text" id="address" name="address" value="Address"><br>
   			
     		<label for="phone">Phone Number</label><br>
-  			<input type="text" id="phone" name="phone" value="Phone Number"><br>
+  			<input disabled type="text" id="phone" name="phone" value="Phone Number"><br>
     
     	<hr>
     	
@@ -53,17 +53,17 @@
     	<hr>
     	
     		<label for="cardnum">Card Number</label><br>
-  			<input type="text" id="cardnum" name="cardnum" value="Card Number"><br>
+  			<input disabled type="text" id="cardnum" name="cardnum" value="Card Number"><br>
     
     		<label for="cardName">Name on Card</label><br>
-  			<input type="text" id="cardName" name="cardName" value="Name on Card"><br>
+  			<input disabled type="text" id="cardName" name="cardName" value="Name on Card"><br>
 
     		<label for="expiry">Card Expiry Date</label><br>
-  			<input type="date" id="expiry" name="expiry" value="Card Expiry Date"><br><br>
+  			<input disabled type="date" id="expiry" name="expiry" value="Card Expiry Date"><br><br>
 
     		
     		<label for="code">CCV</label><br>
-  			<input type="password" id="code" name="code" value="CCV"><br>
+  			<input disabled type="password" id="code" name="code" value="CCV"><br>
 
   		</div>
 
