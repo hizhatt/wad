@@ -42,5 +42,32 @@ if (!$conn) {
 //       echo "Error creating table: " . $conn->error;
 //     }
 
+    // $sql = "CREATE TABLE products (
+    //   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    //   title VARCHAR(500),
+    //   synopsis VARCHAR(5000),
+    //   date VARCHAR(500),
+    //   studios VARCHAR(500),
+    //   genre VARCHAR(500),
+    //   episodes VARCHAR(500),
+    //   duration VARCHAR(500),
+    //   firstDate VARCHAR(500),
+    //   finalDate VARCHAR(500),
+    //   status VARCHAR(500),
+    //   seasons VARCHAR(500),
+    //   rating VARCHAR(500),
+    //   thumbnail VARCHAR(500),
+    //   price VARCHAR(500),
+    //   availability VARCHAR(500)
+    //   )";
+      
+    //   if ($conn->query($sql) === TRUE) {
+    //     echo "Table products created successfully";
+    //   } else {
+    //     echo "Error creating table: " . $conn->error;
+    //   }
+
+    
+
 // $conn->close();
 ?>
