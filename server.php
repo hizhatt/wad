@@ -2,7 +2,7 @@
 session_start();
 
 // initializing variables
-$username = "";
+$username = "adam";
 $email    = "";
 $errors = array(); 
 
