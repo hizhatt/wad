@@ -1,4 +1,7 @@
 <?php include('server.php') ?>
+
+
+?>
 <!DOCTYPE html>
 <html>
     <title>Anime</title>
@@ -38,7 +41,14 @@
                 <img src='Images/Anime$row[id].jpg' class='img-thumbnail img-responsive' alt='$row[title]' width='100%'/>
                 <p class='title'>$row[title]</p>
                 <p class='price'>$row[price]</p>
-                <p><button>Add to Cart</button></p>
+				
+				<form method='post'>
+				<input type='hidden' name='title' id='title' value='$row[title]'>
+				<input type='hidden' name='price' id='price' value='$row[price]'>
+				<button class='btn' type='submit' name='addtocart'>Add to cart</button>
+				</form>
+				
+				
             </div>
             
             <div class='info'>
@@ -94,6 +104,18 @@
             }
         }
             ?>
+			<?php 
+				// initialize variables
+				$title = "";
+				$price = "";
+
+				if (isset($_POST['addtocart'])) {
+					$title = $_POST['title'];
+					$price = $_POST['price'];
+					mysqli_query($db, "INSERT INTO orders (title, price) VALUES ('$title', '$price' )");
+					header('location: admin.php');
+				}
+				?>
         </section>
         </div>
     </div>

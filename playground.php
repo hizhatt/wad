@@ -82,7 +82,19 @@ if (!$conn) {
       //   echo "Error creating table: " . $conn->error;
       // }
 
-    
+
+
+          // $sql = "CREATE TABLE orders (
+			// id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			// title VARCHAR(50),
+			// price VARCHAR(50)
+			// )";
+      
+		  // if ($conn->query($sql) === TRUE) {
+			// echo "Table orders created successfully";
+		  // } else {
+			// echo "Error creating table: " . $conn->error;
+			// }
 
 // $conn->close();
 ?>

@@ -1,3 +1,23 @@
+<?php include('server.php') ?>
+<script>
+function removeitem(prodid){
+	if (confirm("Are you sure want to remove this item?") == true) {
+	window.location.replace("cart.php?action=deleteitem&prodid="+prodid);
+	}
+}
+</script>
+<?php
+if(isset($_GET['action'])){
+  if($_GET['action']=='deleteitem'){
+      if(isset($_GET['prodid'])){
+        $id = $_GET['prodid'];
+        mysqli_query($db, "DELETE FROM `orders` WHERE id='$id'");
+        header('location: cart.php');
+      }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <title>Anime</title>
@@ -14,7 +34,7 @@
     <header>
 		<?php include"header.php" ?>
     </header>
-    
+	
     <body>
         <table id="user">
             <tr>
@@ -22,33 +42,36 @@
               <th class="title">Title</th>
               <th>Price</th>
             </tr>
-            <tr>
-              <td>Item 1</td>
-              <td>Detective Conan</td>
-              <td>RM 150</td>
-            </tr>
-            <tr>
-                <td>Item 2</td>
-                <td>Detective Conan</td>
-                <td>RM 150</td>
-            </tr>
-            <tr>
-                <td>Item 3</td>
-                <td>Detective Conan</td>
-                <td>RM 150</td>
-            </tr>
+			<?php
+			$total=330;
+			$sql = "SELECT * FROM orders";
+			$result = mysqli_query($db, $sql);
+			if (mysqli_num_rows($result) > 0) 
+			{
+				while($row = mysqli_fetch_assoc($result)) 
+				{
+				echo
+				"<tr>
+					<td>Item $row[id]</td>
+					<td>$row[title]</td>
+					<td>$row[price]</td>
+					<td><button onclick='removeitem($row[id])'>Delete</button></td>
+				</tr>";
+				}
+			}
+			?>
         </table>
         <br>
         <table id="total">
             <tr>
                 <th class="subtotal">Total</th>
-                <td>RM 450</td>
+                <td>RM<?php echo $total?></td>
             </tr>
         </table>
 
         <br>
         
-        <a href="Checkout.html">
+        <a href="Checkout.php">
         <button class="button">Proceed to Checkout</button></a>
 
         
