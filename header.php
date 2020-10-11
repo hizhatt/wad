@@ -12,6 +12,8 @@
 	}
 ?>
 <div class="topnav">
+	<a href="index.php" style="font-size:30;"><strong>MyAnimeBuy</strong></a>
+	<a></a>
 	<a href="index.php">Home</a>
 	<a href="Recent.php">Recent</a>
 	<a href="Popular.php">Popular</a>
