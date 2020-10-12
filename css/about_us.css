@@ -54,7 +54,7 @@ body {
     background-color: #555;
   }
   
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 810px) {
     .column {
       width: 100%;
       display: block;
