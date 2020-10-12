@@ -117,7 +117,6 @@ function itemadded(){
 					$title = $_POST['title'];
 					$price = $_POST['price'];
 					mysqli_query($db, "INSERT INTO orders (title, price) VALUES ('$title', '$price' )");
-					header('location: admin.php');
 				}
 				?>
         </section>
