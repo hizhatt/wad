@@ -24,7 +24,7 @@
 	<div class="row">
 	  <div class="column">
 		<div class="card">
-		  <img src="images/aina.jpeg" style="width: 75%" >
+		  <img src="images/aina.jpeg" style="width: 100%; height: 100%" >
 		  <div class="container">
 			<h2 style="text-align: center">Aina Nadhirah</h2>
 			<p class="title">Web Designer</p>
@@ -36,7 +36,7 @@
 
 	  <div class="column">
 		<div class="card">
-		  <img src="Images/adam.jpg" alt="Mike" style="width:100%">
+		  <img src="Images/adam.jpg" alt="Mike" style="width:100%;height: 100%">
 		  <div class="container">
 			<h2>Aiman Adam</h2>
 			<p class="title">CEO</p>
@@ -48,7 +48,7 @@
 
 	  <div class="column">
 		<div class="card">
-		  <img src="Images/hizri.jpg" alt="Mike" style="width:100%">
+		  <img src="Images/hizri.jpg" alt="Mike" style="width:100%; height: 100%">
 		  <div class="container">
 			<h2>Hizri Hatta</h2>
 			<p class="title">Supervisor</p>
@@ -60,7 +60,7 @@
 
 	  <div class="column">
 		<div class="card">
-		  <img src="Images/syarif.jpg" alt="Mike" style="width:100%">
+		  <img src="Images/syarif.jpg" alt="Mike" style="width:100%; height: 100%">
 		  <div class="container">
 			<h2>Syarif Azmin</h2>
 			<p class="title">Tester</p>
