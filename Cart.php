@@ -34,8 +34,9 @@ if(isset($_GET['action'])){
     <header>
 		<?php include"header.php" ?>
     </header>
-	
+	<br><br>
     <body>
+       <div class="MiddleContent">
         <table id="user">
             <tr>
               <th class="test">Number of Item</th>
@@ -78,6 +79,6 @@ if(isset($_GET['action'])){
         <button class="button">Proceed to Checkout</button></a>
 
         
-
+		</div>
     </body>
 </html>

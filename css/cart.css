@@ -59,7 +59,9 @@
   text-align: center;
   display: inline-block;
   font-size: large;
-  margin-right: 5%;
+  width:50%;
+  margin-left: 25%;
+  margin-right: 25%;
   padding: 10px 24px;
   float: right;
 }

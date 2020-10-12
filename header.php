@@ -11,11 +11,12 @@
 		header("location: index.php");
 	}
 ?>
+
 <script>
 function search(){if (confirm("Nothing found") == true) {}}
 </script>
 <div class="topnav">
-	<a href="index.php" style="font-size:30;"><strong>MyAnimeBuy</strong></a>
+	<a href="index.php" style="font-size:20px;"><strong>MyAnimeBuy</strong></a>
 	<a></a>
 	<a href="index.php">Home</a>
 	<a href="Recent.php">Recent</a>
@@ -34,21 +35,22 @@ function search(){if (confirm("Nothing found") == true) {}}
 	</div>
 	<?php endif ?>
 	<form class="example" action="index.php" style="margin:auto;max-width:300px">
-  			<input type="text" placeholder="Search Anime" name="search2">
-  			<button onclick="search()"><i class="fa fa-search"></i></button>
+  			<input type="text" placeholder="Search Anime" name="search2"  style = "height:4%">
+  			<button onclick="search()" style = "height:4%"><i class="fa fa-search"></i></button>
 	</form>
            	
-     <a href="Cart.php"><i class="fa fa-shopping-basket" style="font-size:26px; float:right; width: auto; margin-right: 10%">Cart</i></a>
+     
 
 	
 	<?php  if (!isset($_SESSION['username'])) : ?>
-		<button onclick="location.href='signup.php'" style="width:auto; float:right; margin-right: 2%; background-color: #9999ff">Sign Up</button>
-		<button onclick="location.href='signin.php'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Login</button>
+		<button onclick="location.href='signup.php'" style="width:auto; float:right; margin-right: 0; background-color: #9999ff">Sign Up</button>
+		<button onclick="location.href='signin.php'" style="width:auto; float:right; margin-right: 0; background-color: #b366ff">Login</button>
 	<?php endif ?>
 
 	<?php  if (isset($_SESSION['username'])) : ?>
-		<a><i class="fa fa-id-badge" style="font-size:24px; float:right; width: auto;">Welcome  <strong><?php echo $_SESSION['username']; ?></strong></i></a>
-		<button onclick="location.href='index.php?logout=1'" style=" font-size:22px; width:auto; float:right; margin-right: 1%; background-color: #990000">Logout</button>
-	<?php endif ?>
 
+		<button onclick="location.href='index.php?logout=1'" style=" font-size:18px; width:auto; float:right; margin-right: 1%; background-color: #990000">Logout</button>
+				<a style = "float:right; margin-right: 0;"><i class="fa fa-id-badge" style="font-size:18px; float:right; width: auto;"> Welcome  <strong><?php echo $_SESSION['username']; ?></strong></i></a>
+	<?php endif ?>
+	<a href="Cart.php" style="float:right; width: auto; margin-right: 0"><i class="fa fa-shopping-basket" style="font-size:18px; "> Cart</i></a>
 </div>
