@@ -43,8 +43,8 @@ function search(){if (confirm("Nothing found") == true) {}}
 
 	
 	<?php  if (!isset($_SESSION['username'])) : ?>
-		<button onclick="location.href='signup.php'" style="width:auto; float:right; margin-right: 0; background-color: #9999ff">Sign Up</button>
-		<button onclick="location.href='signin.php'" style="width:auto; float:right; margin-right: 0; background-color: #b366ff">Login</button>
+		<button onclick="location.href='signup.php'" style="width:auto; float:right; margin-right: 1%; background-color: #9999ff">Sign Up</button>
+		<button onclick="location.href='signin.php'" style="width:auto; float:right; margin-right: 1%; background-color: #b366ff">Login</button>
 	<?php endif ?>
 
 	<?php  if (isset($_SESSION['username'])) : ?>
