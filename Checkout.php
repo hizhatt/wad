@@ -133,7 +133,7 @@
 	
 	<script>function done(){
 		window.location.replace("index.php");
-		alert("Done! Thank you for your patronage!");
+		alert("Purchase completed! Thank you for your patronage!");
 		}</script>
 
 

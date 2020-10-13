@@ -28,7 +28,7 @@
     	
     	<hr>
     		<label for="userID">User ID</label><br>
-  			<input disabled type="text" id="userID" name="userID" value="<?php echo $_SESSION['id']; ?>"><br>
+  			<input disabled type="text" id="userID" name="userID" value="1"><br>
   			
     		<label for="uname">Username</label><br>
   			<input disabled type="text" id="uname" name="uname" value="<?php echo $_SESSION['username']; ?>"><br>
