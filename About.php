@@ -15,7 +15,10 @@
 		<?php include"header.php" ?>
 	</header>
 	
-	<div class="content">
+	<br>
+	<br>
+	<br>
+	<br>
 		
 	<div class="MiddleContent">
 
@@ -71,7 +74,7 @@
 	  		</div>
 	  	</div>
 	</div>
-	</div>
+	
 <br><br>
 <footer>
 	<?php include"footer.php"?>

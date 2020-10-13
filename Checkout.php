@@ -87,15 +87,17 @@
       }
             
       .btn {
-        background-color: #4CAF50;
+        background-color: #6600ff;
         color: white;
         padding: 12px;
         margin: 10px 0;
         border: none;
-        width: 100%;
+        width: 20%;
+		margin-left: 40%;
+		margin-right: 25%;
         border-radius: 3px;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 19px;
       }
             
       .btn:hover {
@@ -135,8 +137,11 @@
 	<header>
 		<?php include"header.php" ?>
 	</header>
-	  
-  <div class="content">
+	<br>
+	<br>
+	<br>
+	<br>  
+  <div class="MiddleContent">
 	
 	<script>function done(){
 		window.location.replace("index.php");
